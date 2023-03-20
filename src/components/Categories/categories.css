@@ -1,0 +1,15 @@
+.navigation__block {
+  display: flex;
+  gap: 15px;
+  padding: 12px 20px;
+}
+
+.navigation__block {
+  cursor: pointer;
+  color: rgb(130, 130, 130);
+}
+
+.activ__category {
+  font-weight: 900;
+  color: black;
+}
