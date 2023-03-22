@@ -41,7 +41,6 @@ export const userProfileSlice = createSlice({
   extraReducers: (builder) => {
     builder.addCase(fetchUniqUser.pending, (state) => {
       state.loading = true;
-      state.uniqUser = initialState.uniqUser;
     });
     builder.addCase(
       fetchUniqUser.fulfilled,
@@ -53,7 +52,6 @@ export const userProfileSlice = createSlice({
     );
     builder.addCase(fetchUniqUser.rejected, (state, action) => {
       state.loading = false;
-      state.uniqUser = initialState.uniqUser;
       state.error = action.error.message || "Something went wrong";
     });
   },

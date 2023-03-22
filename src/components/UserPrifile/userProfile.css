@@ -23,6 +23,9 @@
 .phone__block {
   position: relative;
   margin-left: 50px;
+  font-weight: 500;
+  font-size: 16px;
+  color: rgb(0, 0, 0);
 }
 
 .phone-icon {
@@ -34,6 +37,9 @@
   position: relative;
   margin-left: 50px;
   margin-bottom: 40px;
+  font-weight: 500;
+  font-size: 16px;
+  color: rgb(0, 0, 0);
 }
 
 .age-icon {
@@ -43,4 +49,28 @@
 
 .total__age {
   margin-right: 30px;
+}
+
+.profile__header-content {
+  text-align: center;
+}
+
+.profile__header-content h1 {
+  font-weight: 700;
+  font-size: 24px;
+  color: black;
+  margin-top: 15px;
+  margin-bottom: 8px;
+}
+
+.profile__header-content h3 {
+  font-weight: 400;
+  font-size: 16px;
+  color: rgb(88, 88, 88);
+}
+
+.profile__header-content img {
+  width: 114px;
+  height: 114px;
+  border-radius: 100%;
 }

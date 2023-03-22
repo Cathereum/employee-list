@@ -1,5 +1,6 @@
 import { useAppDispatch, useAppSelector } from "../../redux/hooks";
 import { Categories } from "../Categories/Categories";
+import { setLogin } from "../RegistrationPage/registrationPageSlice";
 import { changeModalStatus } from "../SortModal/sortModalSlice";
 import "./header.css";
 import { changeInputValue } from "./headerSlice";
@@ -14,7 +15,16 @@ export const Header = () => {
   return (
     <div>
       <header className="header">
-        <h1 className="header-title">ПОИСК</h1>
+        <div className="header__top">
+          <div className="header-title">ПОИСК</div>
+          <button
+            onClick={() => dispatch(setLogin(false))}
+            className="loginBtn"
+          >
+            Выйти
+          </button>
+        </div>
+
         <img className="searchIcon" src={search} alt="search" />
         <input
           value={inputValue}

@@ -20,6 +20,11 @@ export const UserProfile = () => {
 
   console.log(params.id);
 
+  const diffMilliseconds =
+    new Date().getTime() - new Date(uniqUser.birthday).getTime();
+  const diffYears = diffMilliseconds / (1000 * 60 * 60 * 24 * 365.25);
+  console.log(diffYears.toFixed(0));
+
   return (
     <>
       <div className="profile__header">
@@ -45,7 +50,7 @@ export const UserProfile = () => {
             <img className="phone-icon" src={tel} alt="" />
           </div>
         </div>
-        <div className="total__age">Age</div>
+        <div className="total__age">Возраст: {diffYears.toFixed(0)}</div>
       </div>
     </>
   );

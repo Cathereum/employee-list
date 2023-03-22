@@ -22,16 +22,34 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   gap: 10px;
+  position: relative;
 }
 
-.sort__btn {
-  border: 2px solid rgb(215, 215, 215);
-  padding: 5px 10px;
+.close__modal {
+  position: absolute;
+  top: 13px;
+  right: 14px;
+  cursor: pointer;
 }
 
-.sort__btn.active {
-  border: 2px solid rgb(233, 116, 116);
+.sortCat {
+  position: relative;
+  display: flex;
+  padding-left: 52px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.selected {
+  position: absolute;
+  top: 9px;
+  left: 21px;
+}
+
+.myModal h1 {
+  font-weight: 700;
+  font-size: 20px;
 }

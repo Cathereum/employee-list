@@ -3,9 +3,17 @@
   padding-bottom: 8px;
   position: relative;
 }
+
+.header__top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
 .header-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-left: 16px;
-  margin-bottom: 12px;
 }
 
 .header__input {
@@ -22,13 +30,13 @@
 
 .sortIcon {
   position: absolute;
-  top: 47px;
+  top: 55px;
   right: 15px;
   cursor: pointer;
 }
 
 .searchIcon {
   position: absolute;
-  top: 48px;
+  top: 56px;
   left: 15px;
 }

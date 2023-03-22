@@ -1,2 +1,23 @@
 
 
+.fetchError__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .fetchError__wrapper h1 {
+    font-weight: 900;
+    font-size: 18px;
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 3px;
+  }
+  
+  .fetchError__wrapper h2 {
+    font-weight: 500;
+    font-size: 16px;
+    color: rgb(105, 105, 105);
+  }
+  

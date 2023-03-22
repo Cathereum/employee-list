@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "../../redux/hooks";
 import { FetchError } from "../FetchError/FetchError";
 import { SearchError } from "../SearchError/SearchError";
+import { Skeleton } from "../Skeleton/Skeleton";
 import { UserItem } from "../UserItem/UserItem";
 import "./userList.css";
 import { fetchUsers } from "./userSlice";
@@ -37,14 +38,15 @@ export const UserList = () => {
 
   return (
     <>
-      {users.loading && <div>Loading...</div>}
+      {users.loading &&
+        [...new Array(4)].map((_, index) => <Skeleton key={index} />)}
       {!users.loading && users.error ? (
-        <div>
-          Network error {users.error}
+        <div className="networkError">
+          Network error: {users.error}
           <FetchError />
         </div>
       ) : null}
-      {allUsers.length ? allUsers : <SearchError />}
+      {allUsers.length > 0 || users.loading ? allUsers : <SearchError />}
     </>
   );
 };

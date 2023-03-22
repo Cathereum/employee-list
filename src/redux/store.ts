@@ -1,3 +1,4 @@
+import registrationSlice from "./../components/RegistrationPage/registrationPageSlice";
 import { configureStore } from "@reduxjs/toolkit";
 import categoriesSlice from "../components/Categories/categoriesSlice";
 import headerSlice from "../components/Header/headerSlice";
@@ -12,6 +13,7 @@ const store = configureStore({
     sortModal: sortModalSlice,
     header: headerSlice,
     uniqUser: userProfileSlice,
+    login: registrationSlice,
   },
 });
 
